@@ -1,0 +1,80 @@
+/* Accent: #DA654B */
+
+* {
+    font-family: 'Volkhov', serif;
+}
+
+body {
+    color: #e9dbc7;
+    background-color: #4F494F;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    letter-spacing: 2px;
+}
+
+
+/* =========================================== */
+/* Base / Mobile */
+/* =========================================== */
+
+/* Generic Layout */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+/* Messages pane */
+.messages {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-bar__title, .header-bar__subtitle {
+    text-align: center;
+}
+
+/* Thumbnail images */
+.thumbnail-tray {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    display: inline-block;
+    margin: 15px;
+    max-width: 240px;
+    color: #e9dbc7;
+    background-color: #302b30;
+    text-decoration: none;
+}
+
+.thumbnail__image {
+    width: 240px;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+}
+
+.thumbnail__caption {
+    padding: 0 10px;
+}
+
+
+/* Gallery Popups */
+.popup__img {
+    max-width: 95%;
+    max-height: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.popup__caption {
+    width: 95%;
+    margin: 10px auto;
+    line-height: 1.5;
+}
