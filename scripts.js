@@ -3,7 +3,7 @@ var Globals = {
     thumbnailTray: document.querySelector('#thumbnail_tray'),
     popupTray: document.querySelector('#popup_tray'),
     messages: document.querySelector('#messages'),
-    publicSpreadsheetUrl: '[INSERT PUBLIC URL OF GOOGLE SHEET HERE]'
+    publicSpreadsheetUrl: '[PLACEHOLDER]'
 }
 
 
@@ -42,6 +42,10 @@ var RenderingTools = {
 
 var DataFunctions = {
     fetchSheetData: function(){
+        if(Globals.publicSpreadsheetUrl === '[PLACEHOLDER]'){
+            Globals.messages.innerText = "Please add a valid Google Sheet URL to scripts.js"
+            return
+        }
         Tabletop.init({ 
             key: Globals.publicSpreadsheetUrl,
             callback: DataFunctions.handleSheetResponse,
@@ -63,10 +67,10 @@ var DataFunctions = {
         }
         else {
             console.log("Error fetching data");
-            Globals.messages.innerText = "There was an error fetching the images - please refresh the page";
         }
     }
 }
 
 //Main
 window.addEventListener('DOMContentLoaded', DataFunctions.fetchSheetData)
+window.addEventListener('error', function(){ alert("Error") })
